@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>NightPro</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/site.css">
+  <!-- Nightpro Widget CSS Files -->
+  <link rel="stylesheet" href="https://integrations-dev.nightpro.co/widgets/css/tablelist-widgets-core.css">
+  <link rel="stylesheet" href="https://integrations-dev.nightpro.co/widgets/css/tablelist-widgets-carousel.css">
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- Nightpro Widget Javascript Files -->
+  <script src="https://integrations-dev.nightpro.co/widgets/embedded/tablelist-widgets-core.min.js"></script>
+  <script src="https://integrations-dev.nightpro.co/widgets/embedded/tablelist-widgets-event-list-carousel.min.js"></script>
+  <script>
+    window.TablelistWidgets.onReady(function() {
+      var startDate = new Date();
+      var endDate = new Date();
+      endDate.setDate(endDate.getDate() + 48);
+
+      var eventListCarouselWidget = new window.TablelistWidgets.widgets.EventListCarouselWidget('#event-list-carousel-widget');
+      eventListCarouselWidget.init({
+        key: '4f4b957030068e708d1443e70ffb901d', //nightpro API key
+        venueId: '67083523167cb61d',
+        onEventClick: function(event) {
+          alert('You just clicked on the event : ' + event.name);
+        },
+        eventDisplayType: 'type-1',
+        startDate: startDate,
+        endDate: endDate,
+        autoplay: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        headerImages: true
+      });
+
+      var eventListWidget = new window.TablelistWidgets.widgets.EventListWidget('#event-list-widget');
+      eventListWidget.init({
+        key: '4f4b957030068e708d1443e70ffb901d', //nightpro API key
+        venueId: '67083523167cb61d',
+        onEventClick: function(event) {
+          alert('You just clicked on the event : ' + event.name);
+        },
+        eventCount: 3,
+        eventDisplayType: 'type-1',
+        startDate: startDate,
+        endDate: endDate
+      });
+    });
+  </script>
+
+  <body>
+    <nav id="header" class="navbar navbar-inverse">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">
+            Club Tablelist
+          </a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <!-- <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+            <li><a href="#">Link</a></li>
+          </ul> -->
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <!-- Nightpro Event List Carousel Widget -->
+      <div id="event-list-carousel-widget">
+      </div>
+      <!-- Nightpro Event List Widget -->
+      <div id="event-list-widget">
+      </div>
+    </div>
+  </body>
+
+</html>

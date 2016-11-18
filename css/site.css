@@ -1,0 +1,32 @@
+body {
+  background: url("../images/bg-repeat.jpg");
+  /*background-size: cover;*/
+  background-position: center;
+  background-repeat: repeat;
+}
+#header {
+  border-radius: none !important;
+}
+#event-list-carousel-widget {
+  margin-bottom: 50px;
+}
+#event-list-widget {}
+.tablelist-widgets .slick-arrow {
+  background: none !important;
+}
+.tablelist-widgets .event-card-text {
+  color: white;
+  text-align: center;
+  position: relative;
+}
+.tablelist-widgets .event-card {
+  height: 500px;
+}
+.tablelist-widgets .event-card a {
+  height: 500px;
+}
+.tablelist-widgets .event-card .event-card-text .event-name {
+  padding-top: 100px !important;
+  font-size: 40px !important;
+  font-weight: bold !important;
+}
