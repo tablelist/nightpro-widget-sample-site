@@ -5,8 +5,8 @@
   <title>NightPro</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="src/css/main.css">
-  <!-- Nightpro Widget CSS Files -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <!-- Nightpro Widget CSS Files -->
   <link rel="stylesheet" href="https://integrations-dev.nightpro.co/widgets/css/tablelist-widgets-core.css">
   <link rel="stylesheet" href="https://integrations-dev.nightpro.co/widgets/css/tablelist-widgets-carousel.css">
   <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
@@ -18,14 +18,14 @@
     window.TablelistWidgets.onReady(function() {
       var startDate = new Date();
       var endDate = new Date();
-      endDate.setDate(endDate.getDate() + 48);
+      endDate.setDate(endDate.getDate() + 24);
 
       var eventListCarouselWidget = new window.TablelistWidgets.widgets.EventListCarouselWidget('#event-list-carousel-widget');
       eventListCarouselWidget.init({
         key: '4f4b957030068e708d1443e70ffb901d', //nightpro API key
         venueId: '12f31f5b11e964ee',
         onEventClick: function(event) {
-          window.location.href = './event-detail?event-id=' + event.id;
+          window.location.href = './event-detail.html?event-id=' + event.id;
         },
         eventCount: 6,
         eventDisplayType: 'type-1',
@@ -42,7 +42,7 @@
         key: '4f4b957030068e708d1443e70ffb901d', //nightpro API key
         venueId: '12f31f5b11e964ee',
         onEventClick: function(event) {
-          window.location.href = './event-detail?event-id=' + event.id;
+          window.location.href = './event-detail.html?event-id=' + event.id;
         },
         eventCount: 6,
         eventDisplayType: 'type-3',
@@ -64,16 +64,18 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="/index.html">
             Club Tablelist
           </a>
         </div>
-
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <!-- <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-            <li><a href="#">Link</a></li>
-          </ul> -->
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav pull-right">
+            <li>
+              <a href="/events.html">
+                Events
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </nav>
@@ -87,6 +89,9 @@
         </div>
       </div>
     </div>
+    <footer id="footer">
+
+    </footer>
   </body>
 
 </html>

@@ -1,5 +1,5 @@
 body {
-  background: url("../images/bg-repeat.jpg");
+  background: #000 url("../images/bg-repeat.jpg");
   /*background-size: cover;*/
   background-position: center;
   background-repeat: repeat;
@@ -14,9 +14,20 @@ body {
   background: #000;
 }
 #header {
+  border-top: 2px solid #bf00ff;
+  ;
   border-radius: 0;
   margin: 0;
 }
+#footer {
+  margin-top: 50px;
+  border-top: 10px solid #bf00ff;
+  min-height: 300px;
+  background: #000;
+}
+
+/* ---------------- HOME PAGE ---------------- */
+
 #event-list-carousel-widget {
   margin-bottom: 50px;
 }
@@ -39,4 +50,10 @@ body {
 #event-list-widget .event-card {
   color: white;
   padding: 10px 0;
+}
+
+/* ---------------- EVENT DETAIL PAGE ---------------- */
+
+#event-detail-widget {
+  color: white;
 }

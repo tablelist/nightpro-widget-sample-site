@@ -8,21 +8,47 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
   <!-- Nightpro Widget CSS Files -->
   <link rel="stylesheet" href="https://integrations-dev.nightpro.co/widgets/css/tablelist-widgets-core.css">
-  <link rel="stylesheet" href="https://integrations-dev.nightpro.co/widgets/css/tablelist-widgets-event-detail.css">
+  <link rel="stylesheet" href="https://integrations-dev.nightpro.co/widgets/css/tablelist-widgets-carousel.css">
   <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <!-- Nightpro Widget Javascript Files -->
   <script src="https://integrations-dev.nightpro.co/widgets/embedded/tablelist-widgets-core.min.js"></script>
-  <script src="https://integrations-dev.nightpro.co/widgets/embedded/tablelist-widgets-event-detail.min.js"></script>
+  <script src="https://integrations-dev.nightpro.co/widgets/embedded/tablelist-widgets-event-list-carousel.min.js"></script>
   <script>
     window.TablelistWidgets.onReady(function() {
-      var eventDetailWidget1 = new window.TablelistWidgets.widgets.EventDetailWidget('#event-detail-widget');
-      eventDetailWidget1.init({
+      var startDate = new Date();
+      var endDate = new Date();
+      endDate.setDate(endDate.getDate() + 48);
+
+      var eventListCarouselWidget = new window.TablelistWidgets.widgets.EventListCarouselWidget('#event-list-carousel-widget');
+      eventListCarouselWidget.init({
         key: '4f4b957030068e708d1443e70ffb901d', //nightpro API key
-        eventId: window.TablelistWidgets.utils.getQueryStringValue('event-id'),
-        bgColor: window.TablelistWidgets.utils.getQueryStringValue('bgcolor'),
-        hlColor: window.TablelistWidgets.utils.getQueryStringValue('hlcolor'),
-        onReady: function() {}
+        venueId: '12f31f5b11e964ee',
+        onEventClick: function(event) {
+          window.location.href = './event-detail.html?event-id=' + event.id;
+        },
+        // eventCount: 6,
+        eventDisplayType: 'type-1',
+        startDate: startDate,
+        endDate: endDate,
+        autoplay: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        headerImages: true
+      });
+
+      var eventListWidget = new window.TablelistWidgets.widgets.EventListWidget('#event-list-widget');
+      eventListWidget.init({
+        key: '4f4b957030068e708d1443e70ffb901d', //nightpro API key
+        venueId: '12f31f5b11e964ee',
+        onEventClick: function(event) {
+          window.location.href = './event-detail.html?event-id=' + event.id;
+        },
+        eventCount: 6,
+        eventDisplayType: 'type-3',
+        eventDirection: 'vertical',
+        startDate: startDate,
+        endDate: endDate
       });
     });
   </script>
@@ -44,7 +70,7 @@
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav pull-right">
-            <li>
+            <li class="active">
               <a href="/events.html">
                 Events
               </a>
@@ -55,11 +81,11 @@
     </nav>
     <div class="container">
       <div class="container-content">
-        <!-- Nightpro Event Detail Widget -->
-        <div id="event-detail-widget">
+        <!-- Nightpro Event List Widget -->
+        <h3>Events</h3>
+        <div id="event-list-widget">
         </div>
       </div>
-    </div>
     </div>
     <footer id="footer">
 
