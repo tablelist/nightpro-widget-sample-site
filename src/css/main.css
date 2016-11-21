@@ -6,14 +6,18 @@ body {
   font-family: 'Raleway', sans-serif;
 }
 .container {
-  width: 960px;
+  width: 1024px;
+}
+.container-content {
+  margin-top: 25px;
+  padding: 15px;
+  background: #000;
 }
 #header {
   border-radius: 0;
   margin: 0;
 }
 #event-list-carousel-widget {
-  margin-top: 50px;
   margin-bottom: 50px;
 }
 #event-list-carousel-widget .event-card {
@@ -34,6 +38,5 @@ body {
 }
 #event-list-widget .event-card {
   color: white;
-  background: #1e1e1e;
   padding: 10px 0;
 }
