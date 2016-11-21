@@ -5,12 +5,19 @@ body {
   background-repeat: repeat;
   font-family: 'Raleway', sans-serif;
 }
+.container {
+  width: 960px;
+}
 #header {
   border-radius: 0;
   margin: 0;
 }
 #event-list-carousel-widget {
+  margin-top: 50px;
   margin-bottom: 50px;
+}
+#event-list-carousel-widget .event-card {
+  padding: 0;
 }
 #event-list-carousel-widget .slick-arrow {
   background: none !important;
