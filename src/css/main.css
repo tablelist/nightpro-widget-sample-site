@@ -5,8 +5,10 @@ body {
   background-repeat: repeat;
   font-family: 'Raleway', sans-serif;
 }
-.container {
-  width: 1024px;
+@media(min-width:1024px) {
+  .container {
+    width: 1024px;
+  }
 }
 .container-content {
   margin-top: 25px;
@@ -15,7 +17,6 @@ body {
 }
 #header {
   border-top: 2px solid #bf00ff;
-  ;
   border-radius: 0;
   margin: 0;
 }
