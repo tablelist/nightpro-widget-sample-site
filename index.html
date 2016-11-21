@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/site.css">
   <!-- Nightpro Widget CSS Files -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
   <link rel="stylesheet" href="https://integrations-dev.nightpro.co/widgets/css/tablelist-widgets-core.css">
   <link rel="stylesheet" href="https://integrations-dev.nightpro.co/widgets/css/tablelist-widgets-carousel.css">
   <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
@@ -22,10 +23,11 @@
       var eventListCarouselWidget = new window.TablelistWidgets.widgets.EventListCarouselWidget('#event-list-carousel-widget');
       eventListCarouselWidget.init({
         key: '4f4b957030068e708d1443e70ffb901d', //nightpro API key
-        venueId: '67083523167cb61d',
+        venueId: '12f31f5b11e964ee',
         onEventClick: function(event) {
           window.location.href = './event-detail?event-id=' + event.id;
         },
+        eventCount: 6,
         eventDisplayType: 'type-1',
         startDate: startDate,
         endDate: endDate,
@@ -38,12 +40,13 @@
       var eventListWidget = new window.TablelistWidgets.widgets.EventListWidget('#event-list-widget');
       eventListWidget.init({
         key: '4f4b957030068e708d1443e70ffb901d', //nightpro API key
-        venueId: '67083523167cb61d',
+        venueId: '12f31f5b11e964ee',
         onEventClick: function(event) {
           window.location.href = './event-detail?event-id=' + event.id;
         },
-        eventCount: 3,
-        eventDisplayType: 'type-1',
+        eventCount: 6,
+        eventDisplayType: 'type-3',
+        eventDirection: 'vertical',
         startDate: startDate,
         endDate: endDate
       });
@@ -79,7 +82,7 @@
       <div id="event-list-carousel-widget">
       </div>
       <!-- Nightpro Event List Widget -->
-      <div id="event-list-widget">
+      <div id="event-list-widget" class="col-sm-10 col-sm-offset-1">
       </div>
     </div>
   </body>
