@@ -1,23 +1,22 @@
-# NightPro Widget Sample Website
+# NightPro Integration Sample Website
 
-> Nightpro Sample Venue Website for displaying available widgets. Empower venue partners to preview our available plugins for website integration.
+> Empower venue partners to preview our available plugins for realtime website integrations.
 
-by [NightPro](http://nightpro.co) for professional venue management software and [Tablelist](https://www.tablelist.com).
+by [NightPro](http://nightpro.co), a [Tablelist](https://www.tablelist.com) product.
 
-# Live Preview
+### Live Preview
 
-See [NightPro's Widgets Live HERE](https://tablelist.github.io/nightpro-widget-sample-site/)
+See a live preview [HERE](https://tablelist.github.io/nightpro-widget-sample-site/)
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. 
+Download the repository from [GitHub](https://github.com/tablelist/nightpro-widget-sample-site), and follow the instructions below to set up a local instance for development & testing.
 
 ### Prerequisities
 
-Development tools that you will need installed on your local computer:
+Development tools that you will need locally:
 
 * [Node Package Manager (npm)](http://blog.npmjs.org/post/85484771375/how-to-install-npm)
-* [Gulp](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md)
 
 ### Installing
 
@@ -39,7 +38,7 @@ Your local web server should now be running at ``localhost:1111/index.html``
 
 ### Deployment
 
-The ``master`` branch will automatically be available on GitHub Pages: [https://tablelist.github.io/nightpro-widget-sample-site/](https://tablelist.github.io/nightpro-widget-sample-site/)
+The ``master`` branch will automatically be available on [GitHub Pages](https://tablelist.github.io/nightpro-widget-sample-site/).
 
 ### Versioning
 
