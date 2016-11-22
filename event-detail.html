@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="src/css/main.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- Nightpro Widget CSS Files -->
   <link rel="stylesheet" href="https://integrations-dev.nightpro.co/widgets/css/tablelist-widgets-core.css">
   <link rel="stylesheet" href="https://integrations-dev.nightpro.co/widgets/css/tablelist-widgets-event-detail.css">
@@ -18,7 +19,7 @@
     window.TablelistWidgets.onReady(function() {
       var eventDetailWidget1 = new window.TablelistWidgets.widgets.EventDetailWidget('#event-detail-widget');
       eventDetailWidget1.init({
-        key: '4f4b957030068e708d1443e70ffb901d', //nightpro API key
+        key: 'eb141dc6a59eeed1a35738b6cd1cea6e', //nightpro API key
         eventId: window.TablelistWidgets.utils.getQueryStringValue('event-id'),
         bgColor: window.TablelistWidgets.utils.getQueryStringValue('bgcolor'),
         hlColor: window.TablelistWidgets.utils.getQueryStringValue('hlcolor'),
@@ -43,7 +44,7 @@
           </a>
         </div>
         <div class="collapse navbar-collapse">
-          <ul class="nav navbar-nav pull-right">
+          <ul class="nav navbar-nav navbar-right">
             <li>
               <a href="events.html">
                 Events
@@ -53,7 +54,7 @@
         </div>
       </div>
     </nav>
-    <div class="container">
+    <div id="event-detail" class="container">
       <div class="container-content">
         <!-- Nightpro Event Detail Widget -->
         <div id="event-detail-widget">

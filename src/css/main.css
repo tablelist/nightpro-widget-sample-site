@@ -1,5 +1,5 @@
 body {
-  background: #000 url("../images/bg-repeat.jpg");
+  background: #191919 url("../images/bg-repeat.png");
   /*background-size: cover;*/
   background-position: center;
   background-repeat: repeat;
@@ -13,48 +13,102 @@ body {
 .container-content {
   margin-top: 25px;
   padding: 15px;
-  background: #000;
+  background: #0C0C0C;
 }
 #header {
   border-top: 2px solid #bf00ff;
+  background: #0C0C0C;
   border-radius: 0;
   margin: 0;
+  height: 60px;
+}
+#header .navbar-brand {
+  height: 60px;
+  padding: 18px 15px 24px;
+}
+#header .navbar-nav>li>a {
+  padding-top: 18px;
+  padding-bottom: 18px;
 }
 #footer {
   margin-top: 50px;
   border-top: 10px solid #bf00ff;
   min-height: 300px;
-  background: #000;
+  background: #0C0C0C;
 }
 
 /* ---------------- HOME PAGE ---------------- */
 
-#event-list-carousel-widget {
+#home #event-list-carousel-widget {
   margin-bottom: 50px;
 }
-#event-list-carousel-widget .event-card {
+#home #event-list-carousel-widget .event-card {
   padding: 0;
 }
-#event-list-carousel-widget .slick-arrow {
+#home #event-list-carousel-widget .slick-arrow {
   background: none !important;
 }
-#event-list-carousel-widget .event-card-text {
+#home #event-list-carousel-widget .event-card-text {
   color: white;
   text-align: center;
   position: relative;
 }
-#event-list-carousel-widget .event-card .event-card-text .event-name {
+#home #event-list-carousel-widget .event-card .event-card-text .event-name {
   padding-top: 100px !important;
   font-size: 40px !important;
   font-weight: bold !important;
 }
-#event-list-widget .event-card {
+#home #event-list-widget .event-card {
   color: white;
   padding: 10px 0;
+}
+#home .event-list .event-list-header {
+  color: white;
+  border-bottom: 1px solid #3A3A3A;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 /* ---------------- EVENT DETAIL PAGE ---------------- */
 
-#event-detail-widget {
+#event-detail #event-detail-widget {
   color: white;
+}
+
+/* ---------------- EVENTS PAGE ---------------- */
+
+#events .event-list .event-list-header-wrapper {
+  color: white;
+  border-bottom: 1px solid #3A3A3A;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+  position: relative;
+}
+#events .event-list .event-list-header {
+  display: inline-block;
+}
+#events .event-list .list-toggle-btns {
+  float: right;
+}
+#events .event-list .list-toggle-btns a {
+  font-size: 20px;
+  display: block;
+  float: left;
+  color: white;
+  padding: 10px;
+}
+#events .event-list .list-toggle-btns a.active {
+  color: #bf00ff;
+}
+#events .event-views {
+  position: relative;
+}
+#events .event-view {}
+#events .event-list-view {}
+#events .event-calendar-view {
+  color: white;
+}
+#events #event-list-widget .event-card {
+  color: white;
+  padding: 10px 0;
 }
