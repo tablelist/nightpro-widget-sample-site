@@ -113,7 +113,7 @@ body {
 
 /* ---------------- EVENTS PAGE ---------------- */
 
-#events {
+#events .event-list {
   min-height: 500px;
 }
 #events .event-list .event-list-header-wrapper {
