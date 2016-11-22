@@ -14,16 +14,14 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <!-- Nightpro Widget Javascript Files -->
   <script src="https://integrations-dev.nightpro.co/widgets/embedded/tablelist-widgets-core.min.js"></script>
-  <script src="https://integrations-dev.nightpro.co/widgets/embedded/tablelist-widgets-event-detail.min.js"></script>
+  <script src="https://integrations-dev.nightpro.co/widgets/embedded/tablelist-widgets-reservation-and-guestlist.min.js"></script>
   <script>
     window.TablelistWidgets.onReady(function() {
-      var eventDetailWidget1 = new window.TablelistWidgets.widgets.EventDetailWidget('#event-detail-widget');
-      eventDetailWidget1.init({
+      var reservationsWidget = new window.TablelistWidgets.widgets.AddAdmissionGroupWidget('#reservations-widget');
+      reservationsWidget.init({
         key: 'eb141dc6a59eeed1a35738b6cd1cea6e', //nightpro API key
-        eventId: window.TablelistWidgets.utils.getQueryStringValue('event-id'),
-        bgColor: window.TablelistWidgets.utils.getQueryStringValue('bgcolor'),
-        hlColor: window.TablelistWidgets.utils.getQueryStringValue('hlcolor'),
-        onReady: function() {}
+        venueId: '658f905086c96ac7',
+        type: 'TABLE'
       });
     });
   </script>
@@ -46,34 +44,35 @@
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav navbar-right">
-            <ul class="nav navbar-nav navbar-right">
-              <li>
-                <a href="index.html">
-                  Home
-                </a>
-              </li>
-              <li>
-                <a href="events.html">
-                  Events
-                </a>
-              </li>
-              <li>
-                <a href="reservations.html">
-                  Table Reservations
-                </a>
-              </li>
-            </ul>
+            <li>
+              <a href="index.html">
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="events.html">
+                Events
+              </a>
+            </li>
+            <li>
+              <a class="active" href="reservations.html">
+                Table Reservations
+              </a>
+            </li>
           </ul>
         </div>
       </div>
     </nav>
-    <div id="event-detail" class="container">
+    <div id="reservations" class="container">
       <div class="container-content">
-        <!-- Nightpro Event Detail Widget -->
-        <div id="event-detail-widget">
+        <h3 class="reservations-header">Table Reservations</h3>
+        <p class="reservations-header-subtext">
+          To reserve a table for your group or party please fill out the form below. Our staff will contact with more information regarding your reservation.
+        </p>
+        <!-- Nightpro Event List Widget -->
+        <div id="reservations-widget">
         </div>
       </div>
-    </div>
     </div>
     <footer id="footer">
       <div class="container">

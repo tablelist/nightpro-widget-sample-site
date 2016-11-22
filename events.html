@@ -21,6 +21,8 @@
       var endDate = new Date();
       endDate.setDate(endDate.getDate() + 48);
 
+      let calendarInitialized = false;
+
       var eventCalendarWidget = new window.TablelistWidgets.widgets.EventCalendarWidget('#event-calendar-widget');
       eventCalendarWidget.init({
         key: 'eb141dc6a59eeed1a35738b6cd1cea6e', //nightpro API key
@@ -31,7 +33,11 @@
         startDate: startDate,
         endDate: endDate,
         onReady: function() {
+          if (calendarInitialized) return;
+
           $('.event-calendar-view').hide();
+
+          calendarInitialized = true;
         }
       });
 
@@ -80,14 +86,25 @@
             <span class="icon-bar"></span>
           </button>
           <a class="navbar-brand" href="index.html">
-            Club Tablelist
+            Club
+            <img src="https://assets.tablelist.com/www/partners/tablelist_logo_new.png">
           </a>
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li class="active">
-              <a href="events.html">
+            <li>
+              <a href="index.html">
+                Home
+              </a>
+            </li>
+            <li>
+              <a class="active" href="events.html">
                 Events
+              </a>
+            </li>
+            <li>
+              <a href="reservations.html">
+                Table Reservations
               </a>
             </li>
           </ul>
@@ -123,7 +140,45 @@
       </div>
     </div>
     <footer id="footer">
-
+      <div class="container">
+        <div class="row">
+          <div class="link-list col-sm-4">
+            <h4>Quick Links</h4>
+            <ul>
+              <li>
+                <a href="/events.html">
+                  Events
+                </a>
+              </li>
+              <li>
+                <a href="/reservations.html">
+                  Table Reservations
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="link-list col-sm-4">
+            <h4>Table Reservations</h4>
+            <ul>
+              <li>
+                <a class="btn btn-primary" href="/reservations.html">
+                  Reserve Now
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="link-list col-sm-4">
+            <h4>Other</h4>
+            <ul>
+              <li>
+                <a href="https://tablelist.com">
+                    Tablelist.com
+                  </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </footer>
   </body>
 
