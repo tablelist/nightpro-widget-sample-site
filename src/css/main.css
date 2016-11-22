@@ -108,6 +108,7 @@ body {
 
 #event-detail #event-detail-widget {
   color: white;
+  min-height: 500px;
 }
 
 /* ---------------- EVENTS PAGE ---------------- */
