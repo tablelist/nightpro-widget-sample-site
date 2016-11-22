@@ -9,50 +9,12 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- Nightpro Widget CSS Files -->
   <link rel="stylesheet" href="https://integrations-dev.nightpro.co/widgets/css/tablelist-widgets-core.css">
-  <link rel="stylesheet" href="https://integrations-dev.nightpro.co/widgets/css/tablelist-widgets-carousel.css">
+  <link rel="stylesheet" href="https://integrations-dev.nightpro.co/widgets/css/tablelist-widgets-event-detail.css">
   <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <!-- Nightpro Widget Javascript Files -->
   <script src="https://integrations-dev.nightpro.co/widgets/embedded/tablelist-widgets-core.min.js"></script>
-  <script src="https://integrations-dev.nightpro.co/widgets/embedded/tablelist-widgets-event-list-carousel.min.js"></script>
-  <script>
-    window.TablelistWidgets.onReady(function() {
-      var startDate = new Date();
-      var endDate = new Date();
-      endDate.setDate(endDate.getDate() + 24);
-
-      var eventListCarouselWidget = new window.TablelistWidgets.widgets.EventListCarouselWidget('#event-list-carousel-widget');
-      eventListCarouselWidget.init({
-        key: 'eb141dc6a59eeed1a35738b6cd1cea6e', //nightpro API key
-        venueId: '658f905086c96ac7',
-        onEventClick: function(event) {
-          window.location.href = './event-detail.html?event-id=' + event.id;
-        },
-        eventCount: 6,
-        eventDisplayType: 'type-1',
-        startDate: startDate,
-        endDate: endDate,
-        autoplay: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        headerImages: true
-      });
-
-      var eventListWidget = new window.TablelistWidgets.widgets.EventListWidget('#event-list-widget');
-      eventListWidget.init({
-        key: 'eb141dc6a59eeed1a35738b6cd1cea6e', //nightpro API key
-        venueId: '658f905086c96ac7',
-        onEventClick: function(event) {
-          window.location.href = './event-detail.html?event-id=' + event.id;
-        },
-        eventCount: 6,
-        eventDisplayType: 'type-3',
-        eventDirection: 'vertical',
-        startDate: startDate,
-        endDate: endDate
-      });
-    });
-  </script>
+  <script src="https://integrations-dev.nightpro.co/widgets/embedded/tablelist-widgets-reservation-and-guestlist.min.js"></script>
 
   <body>
     <nav id="header" class="navbar navbar-inverse">
@@ -73,7 +35,7 @@
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav navbar-right">
             <li>
-              <a class="active" href="index.html">
+              <a href="index.html">
                 Home
               </a>
             </li>
@@ -83,7 +45,7 @@
               </a>
             </li>
             <li>
-              <a href="reservations.html">
+              <a class="active" href="reservations.html">
                 Table Reservations
               </a>
             </li>
@@ -91,17 +53,13 @@
         </div>
       </div>
     </nav>
-    <div id="home" class="container">
+    <div id="reservations" class="container">
       <div class="container-content">
-        <!-- Nightpro Event List Carousel Widget -->
-        <div id="event-list-carousel-widget">
-        </div>
-        <!-- Nightpro Event List Widget -->
-        <div class="event-list">
-          <h3 class="event-list-header">Upcoming Events</h3>
-          <div id="event-list-widget" class="clearfix">
-          </div>
-        </div>
+        <h3 class="reservations-header">Buy Now</h3>
+        <p class="reservations-header-subtext">
+          About Tablelist Widget...
+        </p>
+
       </div>
     </div>
     <footer id="footer">
@@ -127,12 +85,7 @@
             <ul>
               <li>
                 <a class="btn btn-primary" href="reservations.html">
-                  Request Reservation
-                </a>
-              </li>
-              <li>
-                <a class="btn btn-primary" href="tablelist.html">
-                  Buy Now
+                  Reserve Now
                 </a>
               </li>
             </ul>
@@ -141,12 +94,7 @@
             <h4>Other</h4>
             <ul>
               <li>
-                <a href="http://www.nightpro.co/" target="_blank">
-                    NightPro.co
-                  </a>
-              </li>
-              <li>
-                <a href="https://tablelist.com" target="_blank">
+                <a href="https://tablelist.com">
                     Tablelist.com
                   </a>
               </li>
