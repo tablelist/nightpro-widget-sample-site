@@ -1,6 +1,6 @@
-# nightpro-widget-sample-site
+# NightPro Widget Sample Website
 
-> Nightpro Sample Venue Website for displaying available widgets
+> Nightpro Sample Venue Website for displaying available widgets. Empower venue partners to preview our available plugins for website integration.
 
 by [NightPro](http://nightpro.co) for professional venue management software and [Tablelist](https://www.tablelist.com).
 
@@ -31,14 +31,15 @@ $ npm install
 Once you have installed local development tools, and downloaded the project dependencies, start a local web server with:
 
 ``` sh
+# Start Local HTTP Server
 $ gulp server
 ```
 
-Your local web server should now be running at ``localhost:9090``
+Your local web server should now be running at ``localhost:1111/index.html``
 
-## Deployment
+### Deployment
 
-The ``gh-pages`` branch will automatically be available at [https://tablelist.github.io/nightpro-widget-sample-site/](https://tablelist.github.io/nightpro-widget-sample-site/)
+The ``master`` branch will automatically be available on GitHub Pages: [https://tablelist.github.io/nightpro-widget-sample-site/](https://tablelist.github.io/nightpro-widget-sample-site/)
 
 ### Versioning
 
