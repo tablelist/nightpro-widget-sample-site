@@ -1,6 +1,5 @@
 body {
   background: #191919 url("../images/bg-repeat.png");
-  /*background-size: cover;*/
   background-position: center;
   background-repeat: repeat;
   font-family: 'Raleway', sans-serif;
@@ -26,8 +25,12 @@ body {
   height: 60px;
   padding: 18px 15px 24px;
   text-transform: uppercase;
+  color: #fff;
+  opacity: .5;
+  -webkit-transition: opacity .5s;
+  transition: opacity .5s;
 }
-#header .navbar-brand:hover>img {
+#header .navbar-brand:hover {
   opacity: 1;
 }
 #header .navbar-brand>img {
@@ -36,14 +39,21 @@ body {
   margin-left: 5px;
   position: relative;
   top: -2px;
-  opacity: .5;
 }
 #header .navbar-nav>li>a {
   padding-top: 18px;
   padding-bottom: 18px;
+  color: #fff;
+  opacity: .8;
+  -webkit-transition: opacity .5s;
+  transition: opacity .5s;
+  border-bottom: 2px solid #000;
+}
+#header .navbar-nav>li>a:hover {
+  opacity: 1;
 }
 #header .navbar-nav>li>a.active {
-  color: white;
+  border-bottom: 2px solid #bf00ff;
 }
 #footer {
   margin-top: 50px;
