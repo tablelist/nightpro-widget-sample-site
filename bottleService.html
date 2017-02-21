@@ -8,20 +8,24 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- Nightpro Widget CSS Files -->
-  <link rel="stylesheet" href="https://integrations.nightpro.co/widgets/css/tablelist-widgets-core.css">
-  <link rel="stylesheet" href="https://integrations.nightpro.co/widgets/css/tablelist-widgets-event-detail.css">
+  <link rel="stylesheet" href="https://integrations-dev.nightpro.co/widgets/css/tablelist-widgets-core.css">
   <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <!-- Nightpro Widget Javascript Files -->
-  <script src="https://integrations.nightpro.co/widgets/embedded/tablelist-widgets-core.min.js"></script>
-  <script src="https://integrations.nightpro.co/widgets/embedded/tablelist-widgets-reservation-and-guestlist.min.js"></script>
+  <script src="https://integrations-dev.nightpro.co/widgets/embedded/tablelist-widgets-core.min.js"></script>
   <script>
     window.TablelistWidgets.onReady(function() {
-      var reservationsWidget = new window.TablelistWidgets.widgets.AddAdmissionGroupWidget('#reservations-widget');
-      reservationsWidget.init({
-        key: '39cc71615a4de01aaa35731ac45ba92c', //nightpro API key
-        venueId: 'ccbae3f036b2017f',
-        type: 'TABLE'
+      var startDate = new Date();
+      var endDate = new Date();
+      endDate.setDate(endDate.getDate() + 14);
+
+      var tablelistBookingWidget = new window.TablelistWidgets.widgets.TablelistBookingWidget('#tablelist-widget');
+      tablelistBookingWidget.init({
+        key: 'eb141dc6a59eeed1a35738b6cd1cea6e',
+        venueId: '658f905086c96ac7',
+        startDate: startDate,
+        endDate: endDate,
+        theme: 'widget-theme-dark'
       });
     });
   </script>
@@ -55,12 +59,12 @@
               </a>
             </li>
             <li>
-              <a class="active" href="reservations.html">
+              <a href="reservations.html">
                 Table Reservations
               </a>
             </li>
             <li>
-              <a href="bottleService.html">
+              <a class="active" href="bottleService.html">
                 Bottle Service
               </a>
             </li>
@@ -70,12 +74,7 @@
     </nav>
     <div id="reservations" class="container">
       <div class="container-content">
-        <h3 class="reservations-header">Table Reservations</h3>
-        <p class="reservations-header-subtext">
-          To reserve a table for your group or party please fill out the form below. Our staff will contact you with more information regarding your reservation.
-        </p>
-        <!-- Nightpro Event List Widget -->
-        <div id="reservations-widget">
+        <div id="tablelist-widget">
         </div>
       </div>
     </div>
@@ -86,12 +85,12 @@
             <h4>Quick Links</h4>
             <ul>
               <li>
-                <a href="events.html">
+                <a href="/events.html">
                   Events
                 </a>
               </li>
               <li>
-                <a href="reservations.html">
+                <a href="/reservations.html">
                   Table Reservations
                 </a>
               </li>
