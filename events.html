@@ -21,8 +21,6 @@
       var endDate = new Date();
       endDate.setDate(endDate.getDate() + 48);
 
-      let calendarInitialized = false;
-
       var eventCalendarWidget = new window.TablelistWidgets.widgets.EventCalendarWidget('#event-calendar-widget');
       eventCalendarWidget.init({
         key: '39cc71615a4de01aaa35731ac45ba92c', //nightpro API key
@@ -33,11 +31,9 @@
         startDate: startDate,
         endDate: endDate,
         onReady: function() {
-          if (calendarInitialized) return;
-
-          $('.event-calendar-view').hide();
-
-          calendarInitialized = true;
+          setTimeout(function () {
+            $('.event-calendar-view').hide();
+          }, 500);
         }
       });
 
