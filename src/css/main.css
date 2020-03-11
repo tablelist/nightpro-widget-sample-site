@@ -23,20 +23,16 @@ body {
   height: 60px;
 }
 #header .navbar-brand {
-  height: 60px;
-  padding: 18px 15px 24px;
+  height: 55px;
+  padding: 0;
   text-transform: uppercase;
 }
-#header .navbar-brand:hover>img {
-  opacity: 1;
-}
 #header .navbar-brand>img {
-  height: 17px;
+  height: 55px;
   display: inline-block;
   margin-left: 5px;
   position: relative;
   top: -2px;
-  opacity: .5;
 }
 #header .navbar-nav>li>a {
   padding-top: 18px;
